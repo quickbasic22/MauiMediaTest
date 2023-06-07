@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiMediaTest"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="MauiMediaTest.SnackBarTest"
+             Title="SnackBarTest">
+    <VerticalStackLayout x:Name="MyVertical" Margin="10">
+        <Label 
+            x:Name="Label1"
+            Text="Welcome to .NET MAUI! Click button to activate SnackBar" FontSize="Large" FontAttributes="Bold"
+            HorizontalOptions="Center" />
+        <Button x:Name="SnackBarBtn" Text="SnackBar" FontSize="Large" WidthRequest="300" FontAttributes="Bold" Clicked="Button_Clicked" />
+
+        <Button x:Name="AnimateBtn" Text="Animate" WidthRequest="300" FontSize="Large" FontAttributes="Bold" Clicked="Button_Clicked_1" />
+
+        <Path x:Name="MyPath" Stroke="Red"
+StrokeThickness="12"
+StrokeLineJoin="Round">
+            <Path.Data>
+                <PathGeometry>
+                    <!-- H -->
+                    <PathFigure StartPoint="0,0">
+                        <LineSegment Point="0,100" />
+                    </PathFigure>
+                    <PathFigure StartPoint="0,50">
+                        <LineSegment Point="50,50" />
+                    </PathFigure>
+                    <PathFigure StartPoint="50,0">
+                        <LineSegment Point="50,100" />
+                    </PathFigure>
+                    <!-- E -->
+                    <PathFigure StartPoint="125, 0">
+                        <BezierSegment Point1="60, -10"
+Point2="60, 60"
+Point3="125, 50" />
+                        <BezierSegment Point1="60, 40"
+Point2="60, 110"
+Point3="125, 100" />
+                    </PathFigure>
+                    <!-- L -->
+                    <PathFigure StartPoint="150, 0">
+                        <LineSegment Point="150, 100" />
+                        <LineSegment Point="200, 100" />
+                    </PathFigure>
+                    <!-- L -->
+                    <PathFigure StartPoint="225, 0">
+                        <LineSegment Point="225, 100" />
+                        <LineSegment Point="275, 100" />
+                    </PathFigure>
+                    <!-- O -->
+                    <PathFigure StartPoint="300, 50">
+                        <ArcSegment Size="25, 50"
+Point="300, 49.9"
+IsLargeArc="True" />
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+    </VerticalStackLayout>
+</ContentPage>

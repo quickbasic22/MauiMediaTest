@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiMediaTest"
+             x:DataType="local:MyDrawable"
+             xmlns:drawable="clr-namespace:MauiMediaTest"
+             x:Class="MauiMediaTest.MyDrawable"
+             Title="My Drawable">
+    <ScrollView>
+        <VerticalStackLayout>
+            <GraphicsView x:Name="GraphicsView1" Drawable="{Binding Drawable}" WidthRequest="1600" HeightRequest="700" />
+            <Button x:Name="AnimateBtn" Text="Animate" WidthRequest="150"  TextColor="Orange"  FontSize="Large" Clicked="AnimateBtn_Clicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiMediaTest.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiMediaTest"
+    Shell.FlyoutBehavior="Flyout"
+    Title="Shell Content Page">
+
+    <ShellContent
+        Title="MyDrawable"
+        ContentTemplate="{DataTemplate local:MyDrawable}"
+        Route="MyDrawable" />
+    <ShellContent
+        Title="SnackBarTest"
+        ContentTemplate="{DataTemplate local:SnackBarTest}"
+        Route="SnackBarTest" />
+    <ShellContent
+        Title="MainPage"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+</Shell>
